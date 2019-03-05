@@ -1,0 +1,16 @@
+# dependencies
+node_modules
+
+# nohup output
+output.log
+
+# vscode editor config
+.editorconfig
+
+# vscode
+.vscode
+
+.DS_Store
+
+# sails build directory
+.tmp
