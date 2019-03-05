@@ -29,16 +29,16 @@ module.exports.http = {
     *                                                                          *
     ***************************************************************************/
 
-    // order: [
-    //   'cookieParser',
-    //   'session',
-    //   'bodyParser',
-    //   'compress',
-    //   'poweredBy',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    // ],
+    order: [
+      'cookieParser',
+      'session',
+      'bodyParser',
+      'compress',
+      'poweredBy',
+      'router',
+      'www',
+      'favicon',
+    ],
 
 
     /***************************************************************************
@@ -54,6 +54,13 @@ module.exports.http = {
     //   var middlewareFn = skipper({ strict: true });
     //   return middlewareFn;
     // })(),
+
+    poweredBy (request, response, next) {
+      const expressApp = sails.hooks.http.app
+      expressApp.disable('x-powered-by')
+      response.set('X-Powered-By', 'fureweb-com')
+      next()
+    }
 
   },
 
