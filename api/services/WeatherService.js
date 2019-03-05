@@ -9,6 +9,6 @@ module.exports = {
       // TODO: 날씨 관련 정보, 최저기온, 최고기온, 강수확률, 강수량, PM2.5, PM10, O3, NO2, CO, SO2 등등 위경도를 통해 얻을 수 있는 모든 정보를 응답 메시지로 작성한다.
     }
 
-    res.json({ weather })
+    return { weather }
   }
 }
